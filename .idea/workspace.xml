@@ -4,6 +4,7 @@
     <list default="true" id="1843a4ed-08b5-4424-a0f7-35ea78a0bfd8" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PetsKids.iml" afterPath="$PROJECT_DIR$/.idea/PetsKids.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="PetsKids.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="29" selection-start="322" selection-end="322" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="1185">
+            <state line="18" column="6" selection-start="501" selection-end="501" vertical-scroll-proportion="0.41990668" vertical-offset="0" max-vertical-offset="643">
               <folding />
             </state>
           </provider>
@@ -46,6 +47,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -336,6 +338,13 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="29" selection-start="322" selection-end="322" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="6" selection-start="501" selection-end="501" vertical-scroll-proportion="0.41990668" vertical-offset="0" max-vertical-offset="643">
           <folding />
         </state>
       </provider>
