@@ -26,4 +26,37 @@ PetsKids::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # set email infrastructure service in both gmail and amazon simple email service
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  #config.action_mailer.default_url_options = { :protocol => 'https', :host => 'petskids.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  ActionMailer::Base.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => ENV["GMAIL_USERNAME"],
+      :password             => ENV["GMAIL_PASSWORD"],
+      :authentication       => "plain",
+      :enable_starttls_auto => true
+  }
+
+  #ActionMailer::Base.smtp_settings = {
+  #    :address              => ENV["AWS_SERVER"],
+  #    :domain               => "petskids.com",
+  #    :port                 => 587,
+  #    :user_name            => ENV["AWS_USERNAME"],
+  #    :password             => ENV["AWS_PASSWORD"],
+  #    :authentication       => :login
+  #}
+
+  # force ssl in each controllers
+  #config.to_prepare { Users::SessionsController.force_ssl }
+  #config.to_prepare { Users::RegistrationsController.force_ssl }
+  #config.to_prepare { Users::PasswordsController.force_ssl }
+  #config.to_prepare { Users::ConfirmationsController.force_ssl }
+  #config.to_prepare { Users::UnlocksController.force_ssl }
+  #config.to_prepare { Users::MainController.force_ssl }
 end

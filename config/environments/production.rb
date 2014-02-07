@@ -77,4 +77,26 @@ PetsKids::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # set email infrastructure service within amazon simple email service
+  config.action_mailer.default_url_options = { :protocol => 'https', :host => 'petskids.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
+
+  ActionMailer::Base.smtp_settings = {
+      :address              => ENV["AWS_SERVER"],
+      :domain               => "petskids.com",
+      :port                 => 587,
+      :user_name            => ENV["AWS_USERNAME"],
+      :password             => ENV["AWS_PASSWORD"],
+      :authentication       => :login
+  }
+
+  #in config/environments/production.rb, force ssl to each controller
+  config.to_prepare { Users::SessionsController.force_ssl }
+  config.to_prepare { Users::RegistrationsController.force_ssl }
+  config.to_prepare { Users::PasswordsController.force_ssl }
+  config.to_prepare { Users::ConfirmationsController.force_ssl }
+  config.to_prepare { Users::UnlocksController.force_ssl }
+  config.to_prepare { Users::MainController.force_ssl }
 end
